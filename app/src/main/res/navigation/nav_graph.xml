@@ -7,7 +7,16 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.anshabunin.sketchnote.MainFragment"
+        android:name="com.anshabunin.sketchnote.ui.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/openCreateNoteFragment"
+            app:destination="@id/createNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNoteFragment"
+        android:name="com.anshabunin.sketchnote.ui.CreateNoteFragment"
+        android:label="fragment_create_note"
+        tools:layout="@layout/fragment_create_note" />
 </navigation>

@@ -6,19 +6,19 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "notes")
 data class Note(
     @PrimaryKey(autoGenerate = true)
-    val id: Int?,
+    val id: Int = 0,
     @ColumnInfo(name = "title")
-    val title: String?,
+    val title: String = "",
     @ColumnInfo(name = "dateTime")
-    val dateTime: String?,
+    val dateTime: String = "",
     @ColumnInfo(name = "subtitle")
-    val subtitle: String?,
+    val subtitle: String = "",
     @ColumnInfo(name = "noteText")
-    val noteText: String?,
+    val noteText: String = "",
     @ColumnInfo(name = "imagePath")
-    val imagePath: String?,
+    val imagePath: String = "",
     @ColumnInfo(name = "color")
-    val color: String?,
+    val color: String = "",
     @ColumnInfo(name = "webLink")
-    val webLink: String?
+    val webLink: String = ""
 )

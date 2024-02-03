@@ -3,6 +3,7 @@ package com.anshabunin.sketchnote.di
 import android.content.Context
 import androidx.room.Room
 import com.anshabunin.sketchnote.database.NotesDatabase
+import com.anshabunin.sketchnote.entities.Note
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,12 +17,16 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideNotesDatabase(@ApplicationContext context: Context): NotesDatabase {
-        return Room.databaseBuilder(
+    fun provideNotesDatabase(@ApplicationContext context: Context) = Room.databaseBuilder(
             context,
-            NotesDatabase::class.java,
-            "notes_database"
-        ).build()
-    }
+            NotesDatabase::class.java, "notes_database")
+        .build()
 
+
+    @Provides
+    @Singleton
+    fun provideDao(db: NotesDatabase) = db.noteDao()
+
+    @Provides
+    fun provideEntity() = Note()
 }

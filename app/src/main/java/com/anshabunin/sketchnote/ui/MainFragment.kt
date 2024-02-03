@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.anshabunin.sketchnote.databinding.FragmentMainBinding
+import com.anshabunin.sketchnote.repository.DbRepository
+import javax.inject.Inject
 
 class MainFragment : Fragment() {
 

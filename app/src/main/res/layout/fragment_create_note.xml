@@ -33,6 +33,7 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <ImageView
+                android:id="@+id/image_save"
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_12sdp"
@@ -72,9 +73,10 @@
                 android:includeFontPadding="false"
                 android:textColor="@color/colorIcons"
                 android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/inputNoteTitle"
                 app:layout_constraintEnd_toEndOf="@id/inputNoteTitle"
                 app:layout_constraintStart_toStartOf="@id/inputNoteTitle"
-                app:layout_constraintBottom_toBottomOf="@+id/inputNoteTitle"/>
+                app:layout_constraintTop_toBottomOf="@+id/inputNoteTitle" />
 
             <EditText
                 android:id="@+id/inputNoteSubtitle"
@@ -110,7 +112,7 @@
                 app:layout_constraintTop_toTopOf="@id/inputNoteSubtitle"/>
 
             <EditText
-                android:id="@+id/inputNote"
+                android:id="@+id/inputNoteText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_12sdp"

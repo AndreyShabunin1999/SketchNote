@@ -8,7 +8,10 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.anshabunin.sketchnote.databinding.FragmentMainBinding
 import com.anshabunin.sketchnote.repository.DbRepository
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+
+@AndroidEntryPoint
 
 class MainFragment : Fragment() {
 
@@ -20,7 +23,7 @@ class MainFragment : Fragment() {
     ): View {
         binding = FragmentMainBinding.inflate(inflater, container, false)
 
-        binding.imageAddNote.setOnClickListener {
+        binding.imageAddNoteMain.setOnClickListener {
             view?.findNavController()?.navigate(MainFragmentDirections.openCreateNoteFragment())
         }
 

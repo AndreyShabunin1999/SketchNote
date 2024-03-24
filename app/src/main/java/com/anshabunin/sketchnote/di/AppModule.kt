@@ -17,11 +17,12 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideNotesDatabase(@ApplicationContext context: Context) = Room.databaseBuilder(
+    fun provideNotesDatabase(@ApplicationContext context: Context): NotesDatabase {
+        return Room.databaseBuilder(
             context,
-            NotesDatabase::class.java, "notes_database")
-        .build()
-
+            NotesDatabase::class.java, "weather_database"
+        ).build()
+    }
 
     @Provides
     @Singleton
